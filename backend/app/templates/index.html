@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Collected Pages</h2>
+
+{% if items %}
+  <div class="cards">
+    {% for item in items %}
+      <div class="card">
+        <h3>{{ item.title }}</h3>
+        <p class="meta">{{ item.domain }} • {{ item.scraped_at.strftime("%Y-%m-%d %H:%M") }}</p>
+        <p class="snippet">{{ item.text[:350] }}{% if item.text|length > 350 %}...{% endif %}</p>
+        <div class="card-actions">
+          <a href="{{ item.url }}" target="_blank" class="link">Open</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No pages collected yet. Click "Add" to scrape a page.</p>
+{% endif %}
+
+<hr/>
+<h3>Quick Actions</h3>
+<form id="build-index-form" action="/api/build_index" method="post">
+  <button type="button" id="build-index-btn">Build FAISS Index</button>
+</form>
+
+<div id="status"></div>
+
+<div class="search-box">
+  <input id="search-input" placeholder="Search semantically..." />
+  <button id="search-btn">Search</button>
+</div>
+
+<div id="search-results"></div>
+{% endblock %}

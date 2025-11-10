@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Add a New URL</h2>
+  <form action="/add" method="post" class="card">
+    <label for="url">URL</label>
+    <input id="url" name="url" placeholder="https://example.com" required/>
+    <button type="submit">Scrape & Save</button>
+  </form>
+  <p><a href="/">← Back</a></p>
+{% endblock %}

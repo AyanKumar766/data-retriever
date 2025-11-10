@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+sqlalchemy
+requests
+beautifulsoup4
+jinja2
+python-multipart
+aiofiles
+python-dotenv
+sentence-transformers
+faiss-cpu
+# Optional for dynamic JS scraping:
+playwright
