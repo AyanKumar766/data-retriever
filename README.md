@@ -45,7 +45,8 @@ Think of it as your personal **AI-powered web intelligence dashboard** — perfe
 
 ## 🏗️ Architecture
 
-<img width="924" height="636" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/da193603-acc0-46a0-b3b8-36e029be9873" />
+<img width="675" height="637" alt="image" src="https://github.com/user-attachments/assets/dc0154ec-8b81-43da-82bb-71104da2893f" />
+
 
 
 
